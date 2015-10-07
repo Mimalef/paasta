@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block content %}
+<title>Cloud | Home</title>
+
+<div class="column-2">
+	<h1 class="center top">Used Apps</h1>
+	{% for tool in selects %}
+		<a href="tools/{{ tool[0] }}"><div class="box-1 center">{{ tool[1] }}</div></a>
+	{% endfor %}
+</div>
+<div class="column-2">
+	<h1 class="center top">Created Apps</h1>
+	{% for tool in creates %}
+		<a href="explorer?id={{ tool[0] }}"><div class="box-1 center">{{ tool[1] }}</div></a>
+	{% endfor %}
+</div>
+{% endblock %}

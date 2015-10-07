@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block content %}
+<title>Cloud | Explorer</title>
+
+<div class="center">
+	{% if back != None %}
+		<a href="?id={{ tool }}&path={{ back }}">
+			<div class="folder">..</div>
+		</a>
+	{% endif %}
+	{% for dir in dirs %}
+	<a href="?id={{ tool }}&path={{ path }}/{{ dir }}">
+		<div class="folder">{{ dir }}</div>
+	</a>
+	{% endfor %}
+	{% for file in files %}
+	<a href="/editor?id={{ tool }}&path={{ path }}/{{ file }}">
+		<div class="file">{{ file }}</div>
+	</a>
+	{% endfor %}
+	<br><br><br>
+	<a href="explorer/create_file?id={{ tool }}&path={{ path }}">
+		<button class="button-1">Create File</button>
+	</a>
+	<a href="explorer/create_folder?id={{ tool }}&path={{ path }}">
+		<button class="button-1">Create Folder</button>
+	</a>
+</div>
+{% endblock %}

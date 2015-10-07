@@ -1,0 +1,30 @@
+body
+{
+	display: table;
+	height: 90%;
+	width: 99%;
+	font-size: 100%;
+	font-family: sans-serif;
+}
+#holder{
+	display: table;
+	width: 400px;
+	height: 100%;
+	text-align: center;
+}
+#gate{
+	border-radius: 100%;
+	background-color: #777;
+	color: #fff;
+	padding: 20%;
+}
+#gate:hover{
+	background-color: #788;
+}
+.center{
+	margin: auto;
+}
+.verical-center{
+	display: table-cell;
+	vertical-align: middle;
+}

@@ -1,0 +1,1 @@
+print render_template('index.html')

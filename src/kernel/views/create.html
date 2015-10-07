@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block content %}
+<title>Cloud | Create</title>
+
+<style>
+    textarea, input
+    {
+        width: 200px;
+    }
+	textarea
+    {
+		height: 100px;
+	}
+</style>
+<form method="get" class="form-1 center">
+    <input name="id" type="hidden" value="{{ tool }}">
+    <input name="path" type="hidden" value="{{ path }}">
+    <input name="name" placeholder="Name"><br>
+    <input name="create" type="submit" value="Create!" class="button-1">
+</form>
+{% endblock %}

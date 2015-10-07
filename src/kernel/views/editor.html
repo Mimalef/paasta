@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block content %}
+<title>Cloud | Editor</title>
+
+<style>
+	textarea{
+		height: 200px;
+		width: 80%;
+	}
+</style>
+<div class="form-1 center">
+<form id="editor">
+	<input name="id" type="hidden" value="{{ tool }}">
+	<input name="path" type="hidden" value="{{ path }}">
+	<textarea name="code">{{ content }}</textarea>
+	<br>
+	
+</form>
+<input name="save" type="submit" form="editor" value="Save" class="button-1">
+<a href="tools/{{ tool }}" target="_blank">
+	<button class="button-1">Try it</button>
+</a>
+</div>
+{% endblock %}

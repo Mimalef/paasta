@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block content %}
+<title>Cloud | Tools</title>
+
+<a href="/create"><div class="box-1 center">Create a new app</div></a>
+<h2 class="center">or select one</h2>
+{% for i in range(0, count) %}
+	<a href="tools/{{ ids[i] }}"><div class="box-1 center">{{ names[i] }}</div></a>
+{% endfor %}
+{% endblock %}
